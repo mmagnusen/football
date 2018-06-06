@@ -2,68 +2,300 @@
 body {
   background-image: url(../pitch-bg.png);
   color: white;
+  background-color: #478416;
 }
 
-/* line 6, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 h1 {
   font-family: 'Mandali', sans-serif;
   margin: 0px;
   padding: 0px;
 }
+@media only screen and (min-width: 0px) {
+  /* line 7, ../sass/style.scss */
+  h1 {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 400px) {
+  /* line 7, ../sass/style.scss */
+  h1 {
+    font-size: 3em;
+  }
+}
 
-/* line 12, ../sass/style.scss */
+@media only screen and (min-width: 0px) {
+  /* line 20, ../sass/style.scss */
+  h2 {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (min-width: 400px) {
+  /* line 20, ../sass/style.scss */
+  h2 {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (min-width: 500px) {
+  /* line 20, ../sass/style.scss */
+  h2 {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 0px) {
+  /* line 34, ../sass/style.scss */
+  p {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (min-width: 400px) {
+  /* line 34, ../sass/style.scss */
+  p {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 500px) {
+  /* line 34, ../sass/style.scss */
+  p {
+    font-size: 1em;
+  }
+}
+
+/* line 49, ../sass/style.scss */
 h2, h3, h4, h5, p, li, a {
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
-  padding: 10px 0;
-}
-
-/* line 18, ../sass/style.scss */
-#title {
-  text-align: center;
-}
-
-/* line 22, ../sass/style.scss */
-#home-wrapper {
-  margin: 0 auto;
-  padding: 20px;
 }
 @media only screen and (min-width: 300px) {
-  /* line 22, ../sass/style.scss */
+  /* line 49, ../sass/style.scss */
+  h2, h3, h4, h5, p, li, a {
+    padding: 0px 0;
+  }
+}
+@media only screen and (min-width: 400px) {
+  /* line 49, ../sass/style.scss */
+  h2, h3, h4, h5, p, li, a {
+    padding: 5px 0;
+  }
+}
+
+/* line 62, ../sass/style.scss */
+#title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* line 68, ../sass/style.scss */
+#home-wrapper {
+  margin: 0 auto;
+}
+@media only screen and (min-width: 300px) {
+  /* line 68, ../sass/style.scss */
+  #home-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 400px) {
+  /* line 68, ../sass/style.scss */
+  #home-wrapper {
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 68, ../sass/style.scss */
   #home-wrapper {
     width: 90%;
   }
 }
-@media only screen and (min-width: 600px) {
-  /* line 22, ../sass/style.scss */
-  #home-wrapper {
-    width: 80%;
-  }
-}
 
-/* line 36, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 .player {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+@media only screen and (min-width: 0px) {
+  /* line 90, ../sass/style.scss */
+  .player > img {
+    width: 40px;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 400px) {
+  /* line 90, ../sass/style.scss */
+  .player > img {
+    width: 50px;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* line 90, ../sass/style.scss */
+  .player > img {
+    width: 70px;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 90, ../sass/style.scss */
+  .player > img {
+    width: 90px;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  /* line 90, ../sass/style.scss */
+  .player > img {
+    width: 110px;
+    height: auto;
+  }
 }
 
-/* line 44, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 #formation {
   display: grid;
-  grid-row-gap: 40px;
+  width: 100%;
 }
 @media only screen and (max-width: 320px) {
-  /* line 44, ../sass/style.scss */
+  /* line 120, ../sass/style.scss */
   #formation {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, 220px);
   }
 }
 @media only screen and (min-width: 321px) {
-  /* line 44, ../sass/style.scss */
+  /* line 120, ../sass/style.scss */
   #formation {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 220px);
+  }
+}
+@media only screen and (min-width: 500px) {
+  /* line 120, ../sass/style.scss */
+  #formation {
+    grid-row-gap: 70px;
+    grid-column-gap: 10px;
     grid-template-rows: repeat(4, 300px);
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 141, ../sass/style.scss */
+  .player-number-1 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row: 1;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 150, ../sass/style.scss */
+  .player-number-2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 158, ../sass/style.scss */
+  .player-number-5 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 2;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 166, ../sass/style.scss */
+  .player-number-6 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row: 2;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 174, ../sass/style.scss */
+  .player-number-3 {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row: 2;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 182, ../sass/style.scss */
+  .player-number-7 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 190, ../sass/style.scss */
+  .player-number-4 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 3;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 198, ../sass/style.scss */
+  .player-number-8 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row: 3;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 206, ../sass/style.scss */
+  .player-number-11 {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row: 3;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 214, ../sass/style.scss */
+  .player-number-10 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 4;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  /* line 222, ../sass/style.scss */
+  .player-number-9 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row: 4;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  /* line 230, ../sass/style.scss */
+  .name-container {
+    height: 100px;
+    min-width: 30px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 300px) {
+  /* line 230, ../sass/style.scss */
+  .name-container {
+    height: 60px;
   }
 }
